@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WABS_DIRECTORY" Class="AppDatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=WABS_DIRECTORY;Integrated Security=True" SettingsObjectName="WABS_Application_Manager.Properties.Settings" SettingsPropertyName="WABS_DIRECTORYConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[_ApplicantEntry]" Member="_ApplicantEntries">
+    <Type Name="_ApplicantEntry">
+      <Column Name="appdate" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="id" Type="System.String" DbType="VarChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fname" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="mname" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bdate" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="cno" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="educational_background" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="course" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="source" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="priority_endorsement" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="other_endorsements" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="mode_of_endorsements" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="exp_months" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="account_manager" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="account_status" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="start_date" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[_AuthUserDir]" Member="_AuthUserDirs">
+    <Type Name="_AuthUserDir">
+      <Column Name="authID" Type="System.String" DbType="VarChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(160)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="[_password]" Member="_password" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="usertype" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.authKeys" Method="authKeys">
+    <Parameter Name="chk_U" Type="System.String" DbType="VarChar(160)" />
+    <Parameter Name="chk_P" Type="System.String" DbType="VarChar(512)" />
+    <ElementType Name="authKeysResult">
+      <Column Name="authID" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="usertype" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_UpdateEntry" Method="SP_UpdateEntry">
+    <Parameter Name="eX_id" Type="System.String" DbType="VarChar(256)" />
+    <Parameter Name="eX_fname" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="eX_mname" Type="System.String" DbType="VarChar(32)" />
+    <Parameter Name="eX_lname" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="eX_age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="eX_bdate" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="eX_gender" Type="System.String" DbType="VarChar(16)" />
+    <Parameter Name="eX_address" Type="System.String" DbType="VarChar(128)" />
+    <Parameter Name="eX_cno" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="eX_email" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="eX_edubg" Type="System.String" DbType="VarChar(128)" />
+    <Parameter Name="eX_course" Type="System.String" DbType="VarChar(256)" />
+    <Parameter Name="eX_source" Type="System.String" DbType="VarChar(128)" />
+    <Parameter Name="eX_appdate" Type="System.String" DbType="VarChar(32)" />
+    <Parameter Name="eX_priority_e" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="eX_others_e" Type="System.String" DbType="VarChar(256)" />
+    <Parameter Name="eX_mo_e" Type="System.String" DbType="VarChar(128)" />
+    <Parameter Name="eX_exp_months" Type="System.Int32" DbType="Int" />
+    <Parameter Name="eX_accmngr" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="eX_accstatus" Type="System.String" DbType="VarChar(256)" />
+    <Parameter Name="eX_start_date" Type="System.String" DbType="VarChar(32)" />
+    <Parameter Name="eX_status" Type="System.String" DbType="VarChar(8)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_AddEntry" Method="SP_AddEntry">
+    <Parameter Name="XX_id" Parameter="xX_id" Type="System.String" DbType="VarChar(256)" />
+    <Parameter Name="XX_fname" Parameter="xX_fname" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="XX_mname" Parameter="xX_mname" Type="System.String" DbType="VarChar(32)" />
+    <Parameter Name="XX_lname" Parameter="xX_lname" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="XX_age" Parameter="xX_age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="XX_bdate" Parameter="xX_bdate" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="XX_gender" Parameter="xX_gender" Type="System.String" DbType="VarChar(16)" />
+    <Parameter Name="XX_address" Parameter="xX_address" Type="System.String" DbType="VarChar(128)" />
+    <Parameter Name="XX_cno" Parameter="xX_cno" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="XX_email" Parameter="xX_email" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="XX_edubg" Parameter="xX_edubg" Type="System.String" DbType="VarChar(128)" />
+    <Parameter Name="XX_course" Parameter="xX_course" Type="System.String" DbType="VarChar(256)" />
+    <Parameter Name="XX_source" Parameter="xX_source" Type="System.String" DbType="VarChar(128)" />
+    <Parameter Name="XX_appdate" Parameter="xX_appdate" Type="System.String" DbType="VarChar(32)" />
+    <Parameter Name="XX_priority_e" Parameter="xX_priority_e" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="XX_others_e" Parameter="xX_others_e" Type="System.String" DbType="VarChar(256)" />
+    <Parameter Name="XX_mo_e" Parameter="xX_mo_e" Type="System.String" DbType="VarChar(128)" />
+    <Parameter Name="XX_exp_months" Parameter="xX_exp_months" Type="System.Int32" DbType="Int" />
+    <Parameter Name="XX_accmngr" Parameter="xX_accmngr" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="XX_accstatus" Parameter="xX_accstatus" Type="System.String" DbType="VarChar(256)" />
+    <Parameter Name="XX_start_date" Parameter="xX_start_date" Type="System.String" DbType="VarChar(32)" />
+    <Parameter Name="XX_status" Parameter="xX_status" Type="System.String" DbType="VarChar(8)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DeleteAcc" Method="SP_DeleteAcc">
+    <Parameter Name="ea_authID" Type="System.String" DbType="VarChar(256)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DeleteEntry" Method="SP_DeleteEntry">
+    <Parameter Name="DE_id" Parameter="dE_id" Type="System.String" DbType="VarChar(256)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_Query" Method="SP_Query">
+    <Parameter Name="II_column" Parameter="iI_column" Type="System.String" DbType="VarChar(32)" />
+    <Parameter Name="II_queryitem" Parameter="iI_queryitem" Type="System.String" DbType="VarChar(256)" />
+    <ElementType Name="SP_QueryResult">
+      <Column Name="appdate" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="id" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="fname" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="mname" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bdate" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="cno" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="educational_background" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="course" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="source" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="priority_endorsement" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="other_endorsements" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="mode_of_endorsements" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="exp_months" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="account_manager" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="account_status" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="start_date" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Register" Method="SP_Register">
+    <Parameter Name="rr_authID" Type="System.String" DbType="VarChar(256)" />
+    <Parameter Name="rr_name" Type="System.String" DbType="VarChar(160)" />
+    <Parameter Name="rr_username" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="rr_password" Type="System.String" DbType="VarChar(512)" />
+    <Parameter Name="rr_type" Type="System.String" DbType="VarChar(6)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_StatusHandler" Method="SP_StatusHandler">
+    <Parameter Name="rx_id" Type="System.String" DbType="VarChar(256)" />
+    <Parameter Name="rx_status" Type="System.String" DbType="VarChar(8)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_UpdateAcc" Method="SP_UpdateAcc">
+    <Parameter Name="ea_authID" Type="System.String" DbType="VarChar(256)" />
+    <Parameter Name="ea_name" Type="System.String" DbType="VarChar(160)" />
+    <Parameter Name="ea_username" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="ea_password" Type="System.String" DbType="VarChar(512)" />
+    <Parameter Name="ea_type" Type="System.String" DbType="VarChar(6)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

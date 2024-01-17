@@ -1,0 +1,53 @@
+﻿<Window x:Class="WABS_Application_Manager.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WABS_Application_Manager"
+        mc:Ignorable="d"
+        Title="Login" Height="334" Width="250" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Loaded="Window_Loaded" Background="Black">
+    <Grid x:Name="MainGrid" Height="334" VerticalAlignment="Center" Width="250" HorizontalAlignment="Center" MouseDown="MainGrid_MouseDown">
+        <Grid.Background>
+            <ImageBrush ImageSource="/GraphicalAssets/WABS_login_bg.jpg" Stretch="Fill" Opacity="0.645">
+                <ImageBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1.35" ScaleY="1"/>
+                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                        <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ImageBrush.RelativeTransform>
+            </ImageBrush>
+        </Grid.Background>
+        <Label Content="Log-in" Height="24" Margin="38,44,38,0" VerticalAlignment="Top" Foreground="#FFFFFDFD" FontFamily="Calibri Light" FontSize="20" Padding="0,0,0,0" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="tbox_username" HorizontalAlignment="Center" Height="20" Margin="0,88,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="188" BorderBrush="White" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="HP Simplified" FontSize="16" Foreground="White" CaretBrush="Black" MaxLines="1">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#33000000" Offset="0.564"/>
+                    <GradientStop Color="#00000000" Offset="0"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <PasswordBox x:Name="pbox_password" HorizontalAlignment="Center" Height="20" Margin="0,134,0,0" VerticalAlignment="Top" Width="188" BorderBrush="White" FontFamily="HP Simplified" BorderThickness="0,0,0,1" PasswordChar="x" Foreground="White">
+            <PasswordBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#33000000" Offset="0.564"/>
+                    <GradientStop Color="#00000000" Offset="0"/>
+                </LinearGradientBrush>
+            </PasswordBox.Background>
+        </PasswordBox>
+        <Label Content="Username" Height="26" Margin="0,108,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="14" RenderTransformOrigin="0,0.5" HorizontalAlignment="Center" Width="82" FontWeight="Normal" FlowDirection="RightToLeft" HorizontalContentAlignment="Center"/>
+        <Label Content="Password" Height="26" VerticalAlignment="Center" Foreground="White" FontFamily="Calibri Light" FontSize="14" RenderTransformOrigin="0,0.5" HorizontalAlignment="Center" Width="82" FontWeight="Normal" FlowDirection="RightToLeft" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btn_Login" Content="LOGIN" HorizontalAlignment="Center" Height="33" Margin="0,208,0,0" VerticalAlignment="Top" Width="98" BorderBrush="{x:Null}" Background="#FFD02B2B" Foreground="White" BorderThickness="0,0,0,0" Click="btn_Login_Click" FontFamily="Calibri Light">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/GraphicalAssets/btn_submit.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="btn_Register" Content="EXIT" HorizontalAlignment="Center" Height="32" Margin="0,256,0,0" VerticalAlignment="Top" Width="98" Background="#FFD02B2B" FontFamily="Calibri Light" Foreground="White" BorderThickness="0,0,0,0" Click="btn_lbl_Close_Click" BorderBrush="{x:Null}" Padding="0,0,0,0">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/GraphicalAssets/btn_submit.png"/>
+            </Button.OpacityMask>
+        </Button>
+
+    </Grid>
+</Window>

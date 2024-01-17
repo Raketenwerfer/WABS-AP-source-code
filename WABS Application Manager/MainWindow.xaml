@@ -1,0 +1,131 @@
+﻿<Window x:Class="WABS_Application_Manager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WABS_Application_Manager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1000" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#00FEE1A7">
+    <Grid Height="650" Width="1000" MouseDown="Grid_MouseDown">
+        <Grid.Background>
+            <ImageBrush ImageSource="/GraphicalAssets/WABS_main_bg.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="97*"/>
+        </Grid.RowDefinitions>
+        <GroupBox HorizontalAlignment="Center" Height="516" Header="v" Grid.Row="1" VerticalAlignment="Top" Width="1000" HorizontalContentAlignment="Right" BorderBrush="{x:Null}" BorderThickness="0,0,0,0" Background="#DF1D1D1D" Margin="0,55,0,0"/>
+        <Rectangle Height="34" VerticalAlignment="Top" Fill="#FFD62323" HorizontalAlignment="Right" Width="0" Grid.RowSpan="2"/>
+        <DatePicker x:Name="dp_appdate" HorizontalAlignment="Left" Height="28" Margin="185,90,0,0" VerticalAlignment="Top" Width="211" BorderBrush="{x:Null}" Foreground="#FF151313" FontFamily="Calibri Light" FontSize="14" BorderThickness="0,0,0,0" SelectedDateFormat="Short" Grid.Row="1">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox x:Name="PART_TextBox" 
+                                    Text="{Binding SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat=\{0:MMMM-dd-yyyy\}}" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+
+
+        </DatePicker>
+
+        <TextBox x:Name="tbox_fname" HorizontalAlignment="Left" Height="20" Margin="185,124,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="266" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="WhiteSmoke" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1"/>
+        <TextBox x:Name="tbox_mname" HorizontalAlignment="Left" Height="20" Margin="185,162,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="266" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="WhiteSmoke" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1"/>
+        <TextBox x:Name="tbox_lname" HorizontalAlignment="Left" Height="20" Margin="185,200,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="266" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="WhiteSmoke" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1"/>
+        <TextBox x:Name="tbox_cno" HorizontalAlignment="Left" Height="20" Margin="185,236,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="266" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="WhiteSmoke" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1" InputScope="Number" PreviewTextInput="tbox_cno_PreviewTextInput" MaxLength="11"/>
+        <TextBox x:Name="tbox_email" HorizontalAlignment="Left" Height="20" Margin="186,272,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="265" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="WhiteSmoke" CaretBrush="#FFF9F9F9" MaxLines="1" RenderTransformOrigin="0.5,0.5" Grid.Row="1"/>
+        <DatePicker x:Name="dp_bday" HorizontalAlignment="Left" Height="26" Margin="186,316,0,0" VerticalAlignment="Top" Width="211" BorderBrush="{x:Null}" Foreground="#FF151313" FontFamily="Calibri Light" FontSize="16" BorderThickness="0,0,0,0" SelectedDateChanged="dp_bday_SelectedDateChanged" SelectedDateFormat="Short" Grid.Row="1">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox x:Name="PART_TextBox" 
+                                    Text="{Binding SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat=\{0:MMMM-dd-yyyy\}}" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+
+
+        </DatePicker>
+        <TextBox x:Name="tbox_address" HorizontalAlignment="Left" Height="20" Margin="188,356,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="266" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="WhiteSmoke" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1"/>
+        <Label Content="Birthdate:" Height="26" Margin="103,314,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" HorizontalAlignment="Left" Width="73" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="cbox_gender" HorizontalAlignment="Left" Height="22" Margin="186,400,0,0" VerticalAlignment="Top" Width="210" FontSize="14" BorderBrush="Black" BorderThickness="1,1,1,1" FontFamily="Calibri Light" Foreground="#FF060606" Background="#FF0E1019" Grid.Row="1" IsEditable="True" SelectedIndex="2">
+            <ComboBoxItem Content="Male" FontFamily="Calibri Light" FontSize="14"/>
+            <ComboBoxItem Content="Female" FontSize="14" FontFamily="Calibri Light"/>
+            <ComboBoxItem Background="{x:Null}" BorderBrush="{x:Null}" Content="Unknown/Not Mentioned" FontFamily="Calibri Light" FontSize="14"/>
+        </ComboBox>
+        <TextBox x:Name="tbox_prio_end" HorizontalAlignment="Left" Height="20" Margin="187,428,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="266" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="White" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1"/>
+        <TextBox x:Name="tbox_other_end" HorizontalAlignment="Left" Height="20" Margin="188,466,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="266" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="White" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1"/>
+        <ComboBox x:Name="cbox_accmngrs" HorizontalAlignment="Left" Height="24" Margin="188,512,0,0" VerticalAlignment="Top" Width="269" FontSize="14" BorderBrush="Black" BorderThickness="1,1,1,1" FontFamily="Calibri Light" Foreground="#FF060606" Background="#FF0E1019" Grid.Row="1" IsEditable="True" SelectedIndex="0"/>
+        <ComboBox x:Name="cbox_appsource" HorizontalAlignment="Left" Height="24" Margin="673,92,0,0" VerticalAlignment="Top" Width="265" FontSize="14" BorderBrush="Black" BorderThickness="1,1,1,1" FontFamily="Calibri Light" Foreground="#FF060606" Background="#FF0E1019" Grid.Row="1" IsEditable="True" SelectedIndex="0"/>
+        <TextBox x:Name="tbox_end_mode" HorizontalAlignment="Left" Height="20" Margin="672,124,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="266" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="White" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1"/>
+        <Label Content="Gender:" HorizontalAlignment="Left" Height="26" Margin="112,396,0,0" VerticalAlignment="Top" Width="62" Foreground="WhiteSmoke" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="cbox_edubg" HorizontalAlignment="Left" Height="24" Margin="675,162,0,0" VerticalAlignment="Top" Width="265" FontSize="14" BorderBrush="Black" BorderThickness="1,1,1,1" FontFamily="Calibri Light" Foreground="#FF060606" Background="#FF0E1019" Grid.Row="1" SelectedIndex="0">
+            <ComboBoxItem Content="HS Graduate" FontFamily="Calibri Light" FontSize="14"/>
+            <ComboBoxItem Content="SHS Graduate"/>
+            <ComboBoxItem Content="Graduate"/>
+            <ComboBoxItem Content="Associate Graduate"/>
+            <ComboBoxItem Content="Vocational Graduate"/>
+            <ComboBoxItem Content="1st Year Completed"/>
+            <ComboBoxItem Content="2nd Year Completed"/>
+            <ComboBoxItem Content="3rd Year Completed"/>
+            <ComboBoxItem Content="4th Year Completed"/>
+            <ComboBoxItem Content="ALS Graduate"/>
+            <ComboBoxItem Content="NOT STATED IN CV"/>
+            <ComboBoxItem Content="N/A"/>
+        </ComboBox>
+        <TextBox x:Name="tbox_course" HorizontalAlignment="Left" Height="20" Margin="673,198,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="265" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="WhiteSmoke" CaretBrush="#FFF9F9F9" MaxLines="1" RenderTransformOrigin="0.5,0.5" Grid.Row="1"/>
+        <RadioButton x:Name="rad_expYes" Content="Yes" HorizontalAlignment="Left" Height="16" Margin="683,243,0,0" Grid.Row="1" VerticalAlignment="Top" Width="43" FontFamily="Calibri Light" HorizontalContentAlignment="Left" Checked="rad_expYes_Checked" Foreground="White"/>
+        <RadioButton x:Name="rad_expNo" Content="No" HorizontalAlignment="Left" Height="16" Margin="683,264,0,0" Grid.Row="1" VerticalAlignment="Top" Width="43" HorizontalContentAlignment="Left" FontFamily="Calibri Light" Checked="rad_expNo_Checked" Foreground="White"/>
+        <TextBox x:Name="tbox_exp" HorizontalAlignment="Left" Height="20" Margin="742,236,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="72" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="White" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1" PreviewTextInput="tbox_exp_PreviewTextInput" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" InputScope="Digits" MaxLength="4" Text="0" IsEnabled="False"/>
+        <TextBox x:Name="tbox_pos_applied" HorizontalAlignment="Left" Height="20" Margin="672,294,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="266" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="White" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1"/>
+        <TextBox x:Name="tbox_accstatus" HorizontalAlignment="Left" Height="20" Margin="672,330,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="266" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="White" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1"/>
+        <TextBox x:Name="tbox_startdate" HorizontalAlignment="Left" Height="20" Margin="672,366,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="266" Background="{x:Null}" BorderBrush="#FF827E7E" BorderThickness="0,0,0,1" TextAlignment="Left" FontFamily="Calibri Light" FontSize="16" Foreground="White" CaretBrush="#FFF9F9F9" MaxLines="1" Grid.Row="1"/>
+        <Label Content="Account Manager:" HorizontalAlignment="Left" Height="30" Margin="46,510,0,0" VerticalAlignment="Top" Width="127" Foreground="White" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Last Name:" Height="26" Margin="92,198,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" HorizontalAlignment="Left" Width="83" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Middle Name:" Height="26" Margin="80,160,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" HorizontalAlignment="Left" Width="95" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="First Name:" Height="26" Margin="92,122,0,0" VerticalAlignment="Top" Foreground="WhiteSmoke" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" HorizontalAlignment="Left" Width="83" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Address:" HorizontalAlignment="Left" Height="26" Margin="110,354,0,0" VerticalAlignment="Top" Width="66" Foreground="WhiteSmoke" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Contact Number:" HorizontalAlignment="Left" Height="26" Margin="58,232,0,0" VerticalAlignment="Top" Width="117" Foreground="WhiteSmoke" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Email Address:" HorizontalAlignment="Left" Height="26" Margin="71,272,0,0" VerticalAlignment="Top" Width="104" Foreground="WhiteSmoke" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Priority Endorsement:" HorizontalAlignment="Left" Height="26" Margin="13,428,0,0" VerticalAlignment="Top" Width="160" Foreground="White" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Status:" HorizontalAlignment="Left" Height="26" Margin="608,328,0,0" VerticalAlignment="Top" Width="54" Foreground="White" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Applicant Information" Height="28" Margin="0,8,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="HP Simplified Light" FontSize="24" Grid.Row="1" Padding="0,0,0,0" HorizontalAlignment="Center" Width="270" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btn_Submit" Content="SUBMIT" Margin="564,490,0,0" Grid.Row="1" BorderBrush="{x:Null}" Background="#FFD02B2B" FontFamily="Calibri Light" FontSize="14" Padding="10,10,10,10" BorderThickness="0,0,0,0" Height="38" VerticalAlignment="Top" Click="btn_Submit_Click" HorizontalAlignment="Left" Width="108" Foreground="White">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/GraphicalAssets/btn_submit.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="btn_viewtable" Content="VIEW ENTRIES" Height="38" Margin="698,490,0,0" Grid.Row="1" VerticalAlignment="Top" Background="#FFD02B2B" BorderBrush="{x:Null}" FontFamily="Calibri Light" Click="btn_viewtable_Click" HorizontalAlignment="Left" Width="108" Foreground="#FFEAEAEA" BorderThickness="0,0,0,0" FontSize="14">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/GraphicalAssets/btn_submit.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="btn_logout" Content="BACK" HorizontalAlignment="Left" Height="38" Margin="832,490,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Background="#FFD02B2B" BorderBrush="{x:Null}" FontFamily="Calibri Light" Click="btn_logout_Click" Foreground="#FFEAEAEA" BorderThickness="0,0,0,0" FontSize="14">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/GraphicalAssets/btn_submit.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Label Content="Age:" Height="26" Margin="398,312,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="38" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Left" VerticalContentAlignment="Top"/>
+        <Label x:Name="lbl_display_age" Content="-:-" Height="26" Margin="430,312,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" Grid.Row="1" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="26" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" FontSize="14"/>
+        <Label Content="Educational Background:" HorizontalAlignment="Left" Height="26" Margin="496,160,0,0" VerticalAlignment="Top" Width="166" Foreground="WhiteSmoke" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Course:" HorizontalAlignment="Left" Height="26" Margin="558,198,0,0" VerticalAlignment="Top" Width="104" Foreground="WhiteSmoke" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Application Source:" HorizontalAlignment="Left" Height="26" Margin="510,90,0,0" VerticalAlignment="Top" Width="151" Foreground="WhiteSmoke" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Other Endorsements:" HorizontalAlignment="Left" Height="26" Margin="14,466,0,0" VerticalAlignment="Top" Width="160" Foreground="White" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Mode of Endorsement:" HorizontalAlignment="Left" Height="26" Margin="502,124,0,0" VerticalAlignment="Top" Width="160" Foreground="White" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="CCE/BPO Experience:" HorizontalAlignment="Left" Height="26" Margin="502,236,0,0" VerticalAlignment="Top" Width="160" Foreground="White" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="months" HorizontalAlignment="Left" Height="26" Margin="814,236,0,0" VerticalAlignment="Top" Width="60" Foreground="White" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+        <Label Content="Start Date:" Height="26" Margin="576,366,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" HorizontalAlignment="Left" Width="86" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+        <Label Content="Application Date:" Height="26" Margin="46,90,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="14" RenderTransformOrigin="0,0.5" HorizontalAlignment="Left" Width="129" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right" Grid.Row="1"/>
+        <Label Content="Position Applied:" HorizontalAlignment="Left" Height="26" Margin="548,292,0,0" VerticalAlignment="Top" Width="114" Foreground="White" FontFamily="Calibri Light" FontSize="14" Grid.Row="1" RenderTransformOrigin="0,0.5" FontWeight="Normal" FlowDirection="LeftToRight" HorizontalContentAlignment="Right"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,43 @@
+﻿Build started...
+1>------ Build started: Project: WABS Application Manager, Configuration: Debug Any CPU ------
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\AuxiliaryHandlers\ExcelServices.cs(25,19,25,24): warning CS0219: The variable 'ex_cr' is assigned but its value is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(253,64,253,102): warning CS0169: The field 'TableWindow.accountstatusDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(255,64,255,94): warning CS0169: The field 'TableWindow.queryDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(254,64,254,95): warning CS0169: The field 'TableWindow.statusDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(250,64,250,94): warning CS0169: The field 'TableWindow.emailDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(248,64,248,96): warning CS0169: The field 'TableWindow.addressDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(246,64,246,94): warning CS0169: The field 'TableWindow.bdateDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(245,64,245,92): warning CS0169: The field 'TableWindow.ageDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(247,64,247,95): warning CS0169: The field 'TableWindow.genderDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(241,64,241,91): warning CS0169: The field 'TableWindow.idDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(251,64,251,101): warning CS0169: The field 'TableWindow.endorsementsDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(242,64,242,94): warning CS0169: The field 'TableWindow.fnameDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(244,64,244,94): warning CS0169: The field 'TableWindow.lnameDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(252,64,252,103): warning CS0169: The field 'TableWindow.accountmanagerDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(243,64,243,94): warning CS0169: The field 'TableWindow.mnameDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(249,64,249,92): warning CS0169: The field 'TableWindow.cnoDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\AuxiliaryHandlers\ExcelServices.cs(25,19,25,24): warning CS0219: The variable 'ex_cr' is assigned but its value is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(254,64,254,95): warning CS0169: The field 'TableWindow.statusDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(252,64,252,103): warning CS0169: The field 'TableWindow.accountmanagerDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(246,64,246,94): warning CS0169: The field 'TableWindow.bdateDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(253,64,253,102): warning CS0169: The field 'TableWindow.accountstatusDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(245,64,245,92): warning CS0169: The field 'TableWindow.ageDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(243,64,243,94): warning CS0169: The field 'TableWindow.mnameDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(247,64,247,95): warning CS0169: The field 'TableWindow.genderDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(249,64,249,92): warning CS0169: The field 'TableWindow.cnoDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(248,64,248,96): warning CS0169: The field 'TableWindow.addressDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(250,64,250,94): warning CS0169: The field 'TableWindow.emailDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(244,64,244,94): warning CS0169: The field 'TableWindow.lnameDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(255,64,255,94): warning CS0169: The field 'TableWindow.queryDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(241,64,241,91): warning CS0169: The field 'TableWindow.idDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(251,64,251,101): warning CS0169: The field 'TableWindow.endorsementsDataGridViewTextBoxColumn' is never used
+1>C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\TableWindow.Designer.cs(242,64,242,94): warning CS0169: The field 'TableWindow.fnameDataGridViewTextBoxColumn' is never used
+1>  WABS Application Manager -> C:\Users\ROCKET\Desktop\COLLEGE WORK\OJT\WABS Application Manager\WABS Application Manager\bin\Debug\WABS Application Manager.exe
+Building WABS Application Manager...
+2>------ Publish started: Project: WABS Application Manager, Configuration: Debug Any CPU ------
+Connecting to 'C:\Users\ROCKET\Desktop\COLLEGE WORK\App Deployment\WABS-AP\'...
+Publishing files...
+Publish success.
+C:\Users\ROCKET\Desktop\COLLEGE WORK\App Deployment\WABS-AP\
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Publish: 1 succeeded, 0 failed, 0 skipped ==========
